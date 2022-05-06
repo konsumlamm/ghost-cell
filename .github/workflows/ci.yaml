@@ -22,7 +22,6 @@ jobs:
         with:
           toolchain: ${{ matrix.rust }}
           profile: minimal
-          override: true
       - run: |
           cargo --version
           cargo test --all-features --verbose
