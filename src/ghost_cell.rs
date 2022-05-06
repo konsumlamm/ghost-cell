@@ -8,9 +8,6 @@ use core::{
     mem,
 };
 
-#[cfg(nightly)]
-compile_error!("running nightly");
-
 /// A `GhostToken<'x>` is _the_ key to access the content of any `&GhostCell<'x, _>` sharing the same brand.
 ///
 /// Each `GhostToken<'x>` is created alongside a unique brand (its lifetime), and each `GhostCell<'x, T>` is associated

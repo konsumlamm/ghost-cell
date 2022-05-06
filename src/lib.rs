@@ -38,6 +38,8 @@
 //  Lints.
 #![deny(missing_docs)]
 
+#![feature(generic_associated_types)]
+
 pub mod ghost_cell;
 
 pub use self::ghost_cell::{GhostCell, GhostToken};
