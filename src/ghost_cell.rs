@@ -8,8 +8,8 @@ use core::{
     mem,
 };
 
-#[cfg(not(nightly))]
-compile_error!("not running nightly");
+#[cfg(nightly)]
+compile_error!("running nightly");
 
 /// A `GhostToken<'x>` is _the_ key to access the content of any `&GhostCell<'x, _>` sharing the same brand.
 ///
