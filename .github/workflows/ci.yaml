@@ -24,7 +24,9 @@ jobs:
           toolchain: ${{ matrix.rust }}
           profile: minimal
           override: true
-      - run: cargo test --all-features --verbose
+      - run: |
+          cargo --version
+          cargo test --all-features --verbose
 
   lint:
     runs-on: ubuntu-latest
